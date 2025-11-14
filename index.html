@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SiteSentryLabs - Web Development & UI/UX Design</title>
+    <title>SiteSentryLabs - Professional Web Development & UI/UX Design</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* Base Styles */
@@ -39,7 +39,7 @@
         }
         
         section {
-            padding: 80px 0;
+            padding: 100px 0;
         }
         
         h1, h2, h3, h4 {
@@ -54,7 +54,7 @@
         
         .btn {
             display: inline-block;
-            padding: 12px 30px;
+            padding: 14px 32px;
             background-color: var(--primary);
             color: var(--dark);
             text-decoration: none;
@@ -63,18 +63,21 @@
             transition: all 0.3s ease;
             border: none;
             cursor: pointer;
+            font-size: 1rem;
+            letter-spacing: 0.5px;
         }
         
         .btn:hover {
             background-color: var(--primary-dark);
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 204, 106, 0.3);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 204, 106, 0.3);
         }
         
         .btn-outline {
             background-color: transparent;
             border: 2px solid var(--primary);
             color: var(--primary);
+            margin-left: 15px;
         }
         
         .btn-outline:hover {
@@ -84,14 +87,15 @@
         
         .section-title {
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 60px;
         }
         
         .section-title h2 {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             position: relative;
             display: inline-block;
-            padding-bottom: 15px;
+            padding-bottom: 20px;
+            font-weight: 700;
         }
         
         .section-title h2::after {
@@ -100,19 +104,27 @@
             bottom: 0;
             left: 50%;
             transform: translateX(-50%);
-            width: 80px;
-            height: 3px;
+            width: 100px;
+            height: 4px;
             background-color: var(--primary);
+            border-radius: 2px;
+        }
+        
+        .section-title p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
         }
         
         /* Header Styles */
         header {
-            background-color: var(--dark-light);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            background-color: rgba(10, 10, 10, 0.95);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.3);
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
+            backdrop-filter: blur(10px);
         }
         
         .navbar {
@@ -127,9 +139,17 @@
             font-weight: 700;
             color: var(--text);
             text-decoration: none;
+            display: flex;
+            align-items: center;
         }
         
         .logo span {
+            color: var(--primary);
+        }
+        
+        .logo i {
+            margin-right: 10px;
+            font-size: 1.5rem;
             color: var(--primary);
         }
         
@@ -139,7 +159,7 @@
         }
         
         .nav-links li {
-            margin-left: 30px;
+            margin-left: 35px;
         }
         
         .nav-links a {
@@ -147,10 +167,27 @@
             color: var(--text);
             font-weight: 500;
             transition: color 0.3s ease;
+            font-size: 1.05rem;
+            position: relative;
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary);
+            transition: width 0.3s ease;
         }
         
         .nav-links a:hover {
             color: var(--primary);
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
         }
         
         .mobile-menu {
@@ -164,7 +201,7 @@
         .hero {
             background: linear-gradient(135deg, var(--dark) 0%, var(--dark-light) 100%);
             color: var(--text);
-            padding: 150px 0 100px;
+            padding: 180px 0 120px;
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -180,17 +217,33 @@
             background: radial-gradient(circle at 30% 50%, rgba(0, 204, 106, 0.1) 0%, transparent 50%);
         }
         
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        
         .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
+            font-size: 3.8rem;
+            margin-bottom: 25px;
             color: var(--text);
+            font-weight: 800;
+            line-height: 1.2;
         }
         
         .hero p {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             max-width: 700px;
-            margin: 0 auto 30px;
+            margin: 0 auto 40px;
             color: var(--text-light);
+            line-height: 1.7;
+        }
+        
+        .hero-btns {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
         }
         
         /* Services Section */
@@ -200,28 +253,57 @@
         
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
         }
         
         .service-card {
             background-color: var(--dark-lighter);
-            border-radius: 8px;
-            padding: 30px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-            transition: transform 0.3s ease;
+            border-radius: 10px;
+            padding: 40px 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: all 0.4s ease;
             text-align: center;
-            border-left: 4px solid var(--primary);
+            border-top: 4px solid var(--primary);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0, 204, 106, 0.05) 0%, transparent 100%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
         }
         
         .service-card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-15px);
+        }
+        
+        .service-card:hover::before {
+            opacity: 1;
         }
         
         .service-icon {
-            font-size: 3rem;
+            font-size: 3.5rem;
             color: var(--primary);
-            margin-bottom: 20px;
+            margin-bottom: 25px;
+            display: inline-block;
+            width: 90px;
+            height: 90px;
+            line-height: 90px;
+            background-color: rgba(0, 204, 106, 0.1);
+            border-radius: 50%;
+        }
+        
+        .service-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 15px;
         }
         
         /* Founders Section */
@@ -231,17 +313,18 @@
         
         .founders-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 50px;
         }
         
         .founder-card {
             background-color: var(--dark-lighter);
-            border-radius: 8px;
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
             text-align: center;
-            transition: transform 0.3s ease;
+            transition: all 0.4s ease;
+            position: relative;
         }
         
         .founder-card:hover {
@@ -249,32 +332,114 @@
         }
         
         .founder-img {
-            height: 300px;
+            height: 350px;
             background-color: var(--dark-light);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 5rem;
-            color: var(--text-light);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .founder-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .founder-card:hover .founder-img img {
+            transform: scale(1.05);
+        }
+        
+        .founder-img::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, transparent 70%, var(--dark-lighter) 100%);
+            z-index: 1;
         }
         
         .founder-info {
-            padding: 25px;
+            padding: 30px;
+            position: relative;
         }
         
         .founder-info h3 {
+            font-size: 1.8rem;
             margin-bottom: 5px;
         }
         
         .founder-title {
             color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+        }
+        
+        .founder-social {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .founder-social a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: var(--dark-light);
+            border-radius: 50%;
+            color: var(--text);
+            transition: all 0.3s ease;
+        }
+        
+        .founder-social a:hover {
+            background-color: var(--primary);
+            color: var(--dark);
+            transform: translateY(-3px);
+        }
+        
+        /* Stats Section */
+        .stats {
+            background-color: var(--dark-light);
+            padding: 80px 0;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 30px 20px;
+        }
+        
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 10px;
+            line-height: 1;
+        }
+        
+        .stat-text {
+            font-size: 1.1rem;
+            color: var(--text-light);
             font-weight: 500;
-            margin-bottom: 15px;
         }
         
         /* Process Section */
         .process {
-            background-color: var(--dark-light);
+            background-color: var(--dark);
         }
         
         .process-steps {
@@ -286,30 +451,36 @@
         
         .process-step {
             flex: 1;
-            min-width: 200px;
+            min-width: 220px;
             text-align: center;
             padding: 20px;
             position: relative;
         }
         
         .step-number {
-            width: 50px;
-            height: 50px;
+            width: 70px;
+            height: 70px;
             background-color: var(--primary);
             color: var(--dark);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             font-weight: bold;
-            margin: 0 auto 20px;
+            margin: 0 auto 25px;
+            box-shadow: 0 5px 15px rgba(0, 204, 106, 0.3);
+        }
+        
+        .process-step h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
         }
         
         .process-step:not(:last-child)::after {
             content: '';
             position: absolute;
-            top: 25px;
+            top: 35px;
             right: -10%;
             width: 20%;
             height: 2px;
@@ -321,7 +492,7 @@
             background: linear-gradient(135deg, var(--dark) 0%, var(--dark-light) 100%);
             color: var(--text);
             text-align: center;
-            padding: 80px 0;
+            padding: 100px 0;
             position: relative;
             overflow: hidden;
         }
@@ -336,36 +507,46 @@
             background: radial-gradient(circle at 70% 50%, rgba(0, 204, 106, 0.1) 0%, transparent 50%);
         }
         
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        
         .cta h2 {
             color: var(--text);
-            margin-bottom: 20px;
+            margin-bottom: 25px;
+            font-size: 2.8rem;
         }
         
         .cta p {
             max-width: 700px;
-            margin: 0 auto 30px;
+            margin: 0 auto 40px;
             color: var(--text-light);
+            font-size: 1.2rem;
         }
         
         /* Footer */
         footer {
             background-color: var(--dark-light);
             color: var(--text);
-            padding: 60px 0 30px;
+            padding: 80px 0 40px;
         }
         
         .footer-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
+            gap: 50px;
+            margin-bottom: 50px;
         }
         
         .footer-col h3 {
             color: var(--text);
             margin-bottom: 25px;
             position: relative;
-            padding-bottom: 10px;
+            padding-bottom: 15px;
+            font-size: 1.4rem;
         }
         
         .footer-col h3::after {
@@ -374,8 +555,9 @@
             bottom: 0;
             left: 0;
             width: 50px;
-            height: 2px;
+            height: 3px;
             background-color: var(--primary);
+            border-radius: 2px;
         }
         
         .footer-links {
@@ -383,63 +565,126 @@
         }
         
         .footer-links li {
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
         
         .footer-links a {
             color: var(--text-light);
             text-decoration: none;
             transition: color 0.3s ease;
+            font-size: 1.05rem;
         }
         
         .footer-links a:hover {
             color: var(--primary);
+            padding-left: 5px;
+        }
+        
+        .footer-contact li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+        
+        .footer-contact i {
+            margin-right: 15px;
+            color: var(--primary);
+            font-size: 1.1rem;
+            margin-top: 3px;
         }
         
         .social-links {
             display: flex;
             gap: 15px;
-            margin-top: 20px;
+            margin-top: 25px;
         }
         
         .social-links a {
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 40px;
-            height: 40px;
+            width: 45px;
+            height: 45px;
             background-color: var(--dark-lighter);
             border-radius: 50%;
             color: var(--text);
             transition: all 0.3s ease;
+            font-size: 1.2rem;
         }
         
         .social-links a:hover {
             background-color: var(--primary);
             color: var(--dark);
-            transform: translateY(-3px);
+            transform: translateY(-5px);
         }
         
         .copyright {
             text-align: center;
-            padding-top: 30px;
+            padding-top: 40px;
             border-top: 1px solid var(--dark-lighter);
-            font-size: 0.9rem;
+            font-size: 1rem;
             color: var(--text-light);
         }
         
         /* Responsive Styles */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 3rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2.4rem;
+            }
+            
+            .process-step:not(:last-child)::after {
+                display: none;
+            }
+        }
+        
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: var(--dark-light);
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .nav-links li {
+                margin: 10px 0;
             }
             
             .mobile-menu {
                 display: block;
             }
             
+            .hero {
+                padding: 150px 0 80px;
+            }
+            
             .hero h1 {
                 font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .hero-btns {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .btn-outline {
+                margin-left: 0;
             }
             
             .section-title h2 {
@@ -450,8 +695,8 @@
                 flex-direction: column;
             }
             
-            .process-step:not(:last-child)::after {
-                display: none;
+            section {
+                padding: 80px 0;
             }
         }
     </style>
@@ -461,7 +706,7 @@
     <header>
         <div class="container">
             <nav class="navbar">
-                <a href="#" class="logo">Site<span>Sentry</span>Labs</a>
+                <a href="#" class="logo"><i class="fas fa-shield-alt"></i>Site<span>Sentry</span>Labs</a>
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#services">Services</a></li>
@@ -479,10 +724,14 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container">
-            <h1>Build Your Digital Presence With Excellence</h1>
-            <p>We create stunning websites and UI/UX designs with ongoing support and maintenance to keep your business thriving online.</p>
-            <a href="#services" class="btn">Our Services</a>
-            <a href="#contact" class="btn btn-outline">Get In Touch</a>
+            <div class="hero-content">
+                <h1>Elevate Your Digital Presence With Professional Web Solutions</h1>
+                <p>We specialize in creating stunning websites, intuitive UI/UX designs, and providing ongoing support to ensure your online success.</p>
+                <div class="hero-btns">
+                    <a href="#services" class="btn">Our Services</a>
+                    <a href="#contact" class="btn btn-outline">Get In Touch</a>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -491,7 +740,7 @@
         <div class="container">
             <div class="section-title">
                 <h2>Our Services</h2>
-                <p>Comprehensive digital solutions to elevate your business</p>
+                <p>Comprehensive digital solutions tailored to elevate your business</p>
             </div>
             <div class="services-grid">
                 <div class="service-card">
@@ -499,21 +748,45 @@
                         <i class="fas fa-code"></i>
                     </div>
                     <h3>Website Development</h3>
-                    <p>Custom websites built with modern technologies, responsive design, and optimized for performance and SEO.</p>
+                    <p>Custom websites built with modern technologies, responsive design, and optimized for performance and SEO to ensure your online presence stands out.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-palette"></i>
                     </div>
                     <h3>UI/UX Design</h3>
-                    <p>User-centered designs that create engaging experiences and drive conversions for your digital products.</p>
+                    <p>User-centered designs that create engaging experiences and drive conversions for your digital products, focusing on both aesthetics and functionality.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-headset"></i>
                     </div>
                     <h3>Support & Maintenance</h3>
-                    <p>Ongoing technical support, security updates, and maintenance to keep your website running smoothly.</p>
+                    <p>Ongoing technical support, security updates, and maintenance to keep your website running smoothly and securely at all times.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">30+</div>
+                    <div class="stat-text">Projects Completed</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">98%</div>
+                    <div class="stat-text">Client Satisfaction</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">2+</div>
+                    <div class="stat-text">Years Experience</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-text">Support Available</div>
                 </div>
             </div>
         </div>
@@ -524,27 +797,39 @@
         <div class="container">
             <div class="section-title">
                 <h2>Meet Our Founders</h2>
-                <p>The visionaries behind SiteSentryLabs</p>
+                <p>The visionaries behind SiteSentryLabs' success</p>
             </div>
             <div class="founders-grid">
                 <div class="founder-card">
                     <div class="founder-img">
-                        <i class="fas fa-user"></i>
+                        <!-- Replace with Shahan Shaon's actual photo -->
+                        <img src="https://i.postimg.cc/1tMx8L4c/unnamed.jpg" alt="Shahan Shaon">
                     </div>
                     <div class="founder-info">
                         <h3>Shahan Shaon</h3>
-                        <p class="founder-title">Co-Founder & CEO</p>
-                        <p>With over 2 years of experience in web development and digital strategy, Shahan leads our technical vision and client success initiatives.</p>
+                        <p class="founder-title">Founder & CEO</p>
+                        <p>With over 2 years of experience in web development and digital strategy, Shahan leads our technical vision and client success initiatives. His expertise in modern web technologies ensures we deliver cutting-edge solutions.</p>
+                        <div class="founder-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                        </div>
                     </div>
                 </div>
                 <div class="founder-card">
                     <div class="founder-img">
-                        <i class="fas fa-user"></i>
+                        <!-- Replace with Faiaz Rahman's actual photo -->
+                        <img src="https://i.postimg.cc/MpqZZs1k/Untitled-design-16.png" alt="Faiaz Rahman">
                     </div>
                     <div class="founder-info">
                         <h3>Faiaz Rahman</h3>
-                        <p class="founder-title">Co-Founder & CTO</p>
-                        <p>Faiaz brings expertise in UI/UX design and system architecture, ensuring our solutions are both beautiful and technically robust.</p>
+                        <p class="founder-title">Founder & CTO</p>
+                        <p>Faiaz brings extensive expertise in UI/UX design and system architecture, ensuring our solutions are both beautiful and technically robust. His focus on user experience drives our design philosophy.</p>
+                        <div class="founder-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -561,23 +846,23 @@
             <div class="process-steps">
                 <div class="process-step">
                     <div class="step-number">1</div>
-                    <h3>Discovery</h3>
-                    <p>We learn about your business, goals, and target audience to create a tailored strategy.</p>
+                    <h3>Discovery & Strategy</h3>
+                    <p>We learn about your business, goals, and target audience to create a tailored strategy that aligns with your vision.</p>
                 </div>
                 <div class="process-step">
                     <div class="step-number">2</div>
-                    <h3>Design</h3>
-                    <p>Our team creates wireframes and mockups for your approval before development begins.</p>
+                    <h3>Design & Prototyping</h3>
+                    <p>Our team creates wireframes and mockups for your approval before development begins, ensuring the design meets your expectations.</p>
                 </div>
                 <div class="process-step">
                     <div class="step-number">3</div>
                     <h3>Development</h3>
-                    <p>We build your website using modern technologies and best practices for performance.</p>
+                    <p>We build your website using modern technologies and best practices for performance, security, and scalability.</p>
                 </div>
                 <div class="process-step">
                     <div class="step-number">4</div>
                     <h3>Launch & Support</h3>
-                    <p>We deploy your website and provide ongoing maintenance and support services.</p>
+                    <p>We deploy your website and provide ongoing maintenance and support services to ensure long-term success.</p>
                 </div>
             </div>
         </div>
@@ -586,9 +871,11 @@
     <!-- CTA Section -->
     <section class="cta" id="contact">
         <div class="container">
-            <h2>Ready to Transform Your Digital Presence?</h2>
-            <p>Contact us today for a free consultation and project estimate.</p>
-            <a href="#contact" class="btn">Get Started</a>
+            <div class="cta-content">
+                <h2>Ready to Transform Your Digital Presence?</h2>
+                <p>Contact us today for a free consultation and project estimate. Let's build something amazing together.</p>
+                <a href="#contact" class="btn">Get Started Today</a>
+            </div>
         </div>
     </section>
 
@@ -598,7 +885,7 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <h3>SiteSentryLabs</h3>
-                    <p>Building exceptional digital experiences with cutting-edge technology and creative design solutions.</p>
+                    <p>Building exceptional digital experiences with cutting-edge technology and creative design solutions that drive business growth.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -628,15 +915,15 @@
                 </div>
                 <div class="footer-col">
                     <h3>Contact Us</h3>
-                    <ul class="footer-links">
-                        <li><i class="fas fa-map-marker-alt"></i> 123 Business Ave, City</li>
-                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
-                        <li><i class="fas fa-envelope"></i> info@sitesentrylabs.com</li>
+                    <ul class="footer-links footer-contact">
+                        <li><i class="fas fa-map-marker-alt"></i> <span>123 Business Avenue, Suite 100, New York, NY 10001</span></li>
+                        <li><i class="fas fa-phone"></i> <span>+1 (555) 123-4567</span></li>
+                        <li><i class="fas fa-envelope"></i> <span>info@sitesentrylabs.com</span></li>
                     </ul>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2023 SiteSentryLabs. All Rights Reserved.</p>
+                <p>&copy; 2025 SiteSentryLabs. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
@@ -644,7 +931,8 @@
     <script>
         // Mobile menu toggle
         document.querySelector('.mobile-menu').addEventListener('click', function() {
-            document.querySelector('.nav-links').classList.toggle('active');
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
         });
 
         // Smooth scrolling for navigation links
@@ -661,10 +949,24 @@
                         top: targetElement.offsetTop - 80,
                         behavior: 'smooth'
                     });
+                    
+                    // Close mobile menu after clicking a link
+                    if(window.innerWidth <= 768) {
+                        document.querySelector('.nav-links').classList.remove('active');
+                    }
                 }
             });
         });
+
+        // Add shadow to header on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if(window.scrollY > 50) {
+                header.style.boxShadow = '0 5px 20px rgba(0,0,0,0.3)';
+            } else {
+                header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.3)';
+            }
+        });
     </script>
 </body>
-
 </html>
