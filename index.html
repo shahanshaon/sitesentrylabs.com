@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SiteSentryLabs | Cybersecurity & Web Development</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="icon/SSL.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <!-- 3D Background Canvas -->
+    <canvas id="bgCanvas"></canvas>
+    
+    <!-- Matrix Binary Rain Overlay -->
+    <div class="matrix-rain"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1><i class="fas fa-shield-alt"></i> SiteSentry<span>Labs</span></h1>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="team.html">Our Team</a>
+                <a href="contact.html">Contact</a>
+                <a href="#security-audit" class="btn-audit">Free Security Audit</a>
+            </div>
+            <div class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span><i class="fas fa-shield-check"></i> Enterprise Security Certified</span>
+            </div>
+            <h2 class="hero-title">Secure <span class="typewriter">Digital Transformation</span></h2>
+            <p class="hero-subtitle">Protecting your digital presence with cutting-edge cybersecurity solutions and robust web development</p>
+            <div class="hero-buttons">
+                <a href="services.html" class="btn-primary">
+                    <i class="fas fa-rocket"></i> Explore Services
+                </a>
+                <a href="#security-audit" class="btn-secondary">
+                    <i class="fas fa-search"></i> Free Security Audit
+                </a>
+                <a href="contact.html" class="btn-tertiary">
+                    <i class="fas fa-headset"></i> 24/7 Support
+                </a>
+            </div>
+            <div class="hero-trust">
+                <div class="trust-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>ISO 27001 Certified</span>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>GDPR Compliant</span>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Zero Breach Guarantee</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-3d">
+            <div class="cube-container">
+                <div class="cube">
+                    <div class="face front">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="face back">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="face right">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <div class="face left">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div class="face top">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="face bottom">
+                        <i class="fas fa-bug"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="floating-elements">
+                <div class="float-element el1"><i class="fas fa-shield-check"></i></div>
+                <div class="float-element el2"><i class="fas fa-code-branch"></i></div>
+                <div class="float-element el3"><i class="fas fa-network-wired"></i></div>
+                <div class="float-element el4"><i class="fas fa-database"></i></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Badges -->
+    <section class="trust-badges">
+        <div class="badges-container">
+            <div class="badge">
+                <i class="fas fa-medal"></i>
+                <h4>5+ Years Excellence</h4>
+            </div>
+            <div class="badge">
+                <i class="fas fa-user-shield"></i>
+                <h4>200+ Secured Clients</h4>
+            </div>
+            <div class="badge">
+                <i class="fas fa-project-diagram"></i>
+                <h4>500+ Projects</h4>
+            </div>
+            <div class="badge">
+                <i class="fas fa-clock"></i>
+                <h4>24/7 Monitoring</h4>
+            </div>
+            <div class="badge">
+                <i class="fas fa-headset"></i>
+                <h4>99.9% Uptime</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="services-overview">
+        <div class="section-header">
+            <h2>Our <span>Expertise</span></h2>
+            <p>Comprehensive solutions for your digital security needs</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class service-card-inner">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Secure Web Development</h3>
+                    <p>Custom, secure web applications built with modern technologies and security-first approach.</p>
+                    <div class="service-features">
+                        <span><i class="fas fa-check"></i> OWASP Compliance</span>
+                        <span><i class="fas fa-check"></i> Secure APIs</span>
+                        <span><i class="fas fa-check"></i> Code Review</span>
+                    </div>
+                    <a href="pages/services.html#web-dev" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card-hover">
+                    <h4>Starting at $500</h4>
+                    <p>Custom development with security built-in</p>
+                    <a href="pages/contact.html" class="btn-primary">Get Quote</a>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-card-inner">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Cybersecurity Services</h3>
+                    <p>Protect your business from threats with our comprehensive security assessment and solutions.</p>
+                    <div class="service-features">
+                        <span><i class="fas fa-check"></i> Penetration Testing</span>
+                        <span><i class="fas fa-check"></i> Vulnerability Assessment</span>
+                        <span><i class="fas fa-check"></i> 24/7 Monitoring</span>
+                    </div>
+                    <a href="pages/services.html#cybersecurity" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card-hover">
+                    <h4>Starting at $1,500/month</h4>
+                    <p>Complete security monitoring package</p>
+                    <a href="pages/contact.html" class="btn-primary">Get Protected</a>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-card-inner">
+                    <div class="service-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Security Consultancy</h3>
+                    <p>Expert guidance to strengthen your security posture and compliance with industry standards.</p>
+                    <div class="service-features">
+                        <span><i class="fas fa-check"></i> Risk Assessment</span>
+                        <span><i class="fas fa-check"></i> Compliance Audit</span>
+                        <span><i class="fas fa-check"></i> Strategy Planning</span>
+                    </div>
+                    <a href="pages/services.html#consultancy" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card-hover">
+                    <h4>Starting at $300</h4>
+                    <p>Comprehensive security audit</p>
+                    <a href="pages/contact.html" class="btn-primary">Consult Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="services-cta">
+            <a href="pages/services.html" class="btn-secondary">View All Services <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </section>
+
+    <!-- Security Features -->
+    <section class="security-features">
+        <div class="features-container">
+            <div class="features-content">
+                <h2>Advanced <span>Security Features</span></h2>
+                <p class="features-subtitle">Our multi-layered security approach ensures complete protection</p>
+                
+                <div class="features-grid">
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-fingerprint"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>Biometric Authentication</h3>
+                            <p>Multi-factor authentication with biometric verification for enhanced security.</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>AI Threat Detection</h3>
+                            <p>Machine learning algorithms that detect and prevent threats in real-time.</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-cloud-shield-alt"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>Cloud Security</h3>
+                            <p>End-to-end encryption and secure cloud infrastructure for all deployments.</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <i class="fas fa-file-shield"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h3>Data Encryption</h3>
+                            <p>Military-grade encryption for data at rest and in transit.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="features-visual">
+                <div class="security-shield">
+                    <div class="shield-core">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="shield-ring ring1"></div>
+                    <div class="shield-ring ring2"></div>
+                    <div class="shield-ring ring3"></div>
+                    <div class="threat-dots">
+                        <div class="threat-dot dot1"></div>
+                        <div class="threat-dot dot2"></div>
+                        <div class="threat-dot dot3"></div>
+                        <div class="threat-dot dot4"></div>
+                        <div class="threat-dot dot5"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies -->
+    <section class="case-studies">
+        <div class="section-header">
+            <h2>Success <span>Stories</span></h2>
+            <p>Real results from our satisfied clients</p>
+        </div>
+        <div class="case-studies-grid">
+            <div class="case-study">
+                <div class="case-header">
+                    <div class="case-logo">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <div class="case-info">
+                        <h3>FinTech Solutions Inc.</h3>
+                        <span class="case-tag">Financial Sector</span>
+                    </div>
+                </div>
+                <div class="case-content">
+                    <p>Reduced security incidents by 95% after implementing our comprehensive security framework.</p>
+                    <div class="case-stats">
+                        <div class="stat">
+                            <h4>95%</h4>
+                            <p>Reduction in Threats</p>
+                        </div>
+                        <div class="stat">
+                            <h4>24/7</h4>
+                            <p>Security Monitoring</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="case-link">Read Full Case Study <i class="fas fa-external-link-alt"></i></a>
+            </div>
+            <div class="case-study">
+                <div class="case-header">
+                    <div class="case-logo">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <div class="case-info">
+                        <h3>E-Shop Global</h3>
+                        <span class="case-tag">E-commerce</span>
+                    </div>
+                </div>
+                <div class="case-content">
+                    <p>Secure e-commerce platform handling 10,000+ transactions daily with zero breaches.</p>
+                    <div class="case-stats">
+                        <div class="stat">
+                            <h4>10K+</h4>
+                            <p>Daily Transactions</p>
+                        </div>
+                        <div class="stat">
+                            <h4>0</h4>
+                            <p>Security Breaches</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="case-link">Read Full Case Study <i class="fas fa-external-link-alt"></i></a>
+            </div>
+            <div class="case-study">
+                <div class="case-header">
+                    <div class="case-logo">
+                        <i class="fas fa-hospital"></i>
+                    </div>
+                    <div class="case-info">
+                        <h3>MediCare Systems</h3>
+                        <span class="case-tag">Healthcare</span>
+                    </div>
+                </div>
+                <div class="case-content">
+                    <p>HIPAA compliant patient management system serving 50+ healthcare facilities.</p>
+                    <div class="case-stats">
+                        <div class="stat">
+                            <h4>50+</h4>
+                            <p>Healthcare Facilities</p>
+                        </div>
+                        <div class="stat">
+                            <h4>100%</h4>
+                            <p>HIPAA Compliant</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="case-link">Read Full Case Study <i class="fas fa-external-link-alt"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Audit CTA -->
+    <section class="security-audit" id="security-audit">
+        <div class="audit-container">
+            <div class="audit-content">
+                <h2>Free <span>Security Audit</span></h2>
+                <p class="audit-subtitle">Get a comprehensive security assessment of your website or application</p>
+                <ul class="audit-features">
+                    <li><i class="fas fa-check-circle"></i> Vulnerability Assessment</li>
+                    <li><i class="fas fa-check-circle"></i> Security Score Report</li>
+                    <li><i class="fas fa-check-circle"></i> Remediation Plan</li>
+                    <li><i class="fas fa-check-circle"></i> 30-min Expert Consultation</li>
+                </ul>
+            </div>
+            <div class="audit-form">
+                <h3>Get Your Free Audit</h3>
+                <form id="auditForm">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Email Address" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="url" placeholder="Website URL">
+                    </div>
+                    <button type="submit" class="btn-primary">
+                        <i class="fas fa-search"></i> Start Free Audit
+                    </button>
+                    <p class="form-note">No credit card required. Results in 24 hours.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Preview -->
+    <section class="team-preview">
+        <div class="section-header">
+            <h2>Meet Our <span>Cyber Warriors</span></h2>
+            <p>Experts in web development and cybersecurity</p>
+        </div>
+        <div class="team-preview-container">
+            <div class="team-stats">
+                <div class="stat">
+                    <h3>9</h3>
+                    <p>Security Experts</p>
+                </div>
+                <div class="stat">
+                    <h3>20+</h3>
+                    <p>Certifications</p>
+                </div>
+                <div class="stat">
+                    <h3>4+</h3>
+                    <p>Years Avg. Experience</p>
+                </div>
+            </div>
+            <div class="team-highlight">
+                <div class="team-member">
+                    <div class="member-avatar">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="member-info">
+                        <h4>Shahan Shaon</h4>
+                        <p>CTO & Lead Developer</p>
+                        <div class="member-certifications">
+                            <span>CISSP</span>
+                            <span>CEH</span>
+                            <span>OSCP</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-avatar">
+                        <i class="fas fa-user-secret"></i>
+                    </div>
+                    <div class="member-info">
+                        <h4>Faiaz Rahaman</h4>
+                        <p>Chief Security Officer</p>
+                        <div class="member-certifications">
+                            <span>AWS Certified</span>
+                            <span>React Expert</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="team.html" class="btn-primary">Meet Full Team <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="section-header">
+            <h2>Client <span>Testimonials</span></h2>
+            <p>What our clients say about our services</p>
+        </div>
+        <div class="testimonials-slider">
+            <div class="testimonial active">
+                <div class="testimonial-content">
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p>"SiteSentryLabs transformed our security posture. Their team is professional, knowledgeable, and always available when we need them."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Reazul Hasan</h4>
+                            <p>Head of Operations and Facilities, Niyaz International</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial">
+                <div class="testimonial-content">
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p>"The security audit uncovered vulnerabilities we never knew existed. Their remediation plan was clear and effective."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Dr. Sarah Johnson</h4>
+                            <p>Director, HealthSecure Systems</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial">
+                <div class="testimonial-content">
+                    <div class="quote-icon">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p>"Their development team built our platform with security as a core feature, not an afterthought. Exceptional work!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Robert Williams</h4>
+                            <p>CEO, EduTech Solutions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-controls">
+                <button class="slider-prev"><i class="fas fa-chevron-left"></i></button>
+                <div class="slider-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                <button class="slider-next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Partners -->
+    <section class="partners">
+        <div class="section-header">
+            <h2>Technology <span>Partners</span></h2>
+            <p>Working with industry-leading technologies</p>
+        </div>
+        <div class="partners-grid">
+            <div class="partner">
+                <i class="fab fa-aws"></i>
+                <span>AWS</span>
+            </div>
+            <div class="partner">
+                <i class="fab fa-microsoft"></i>
+                <span>Azure</span>
+            </div>
+            <div class="partner">
+                <i class="fab fa-google"></i>
+                <span>Google Cloud</span>
+            </div>
+            <div class="partner">
+                <i class="fab fa-react"></i>
+                <span>React</span>
+            </div>
+            <div class="partner">
+                <i class="fab fa-node-js"></i>
+                <span>Node.js</span>
+            </div>
+            <div class="partner">
+                <i class="fas fa-shield-alt"></i>
+                <span>Cloudflare</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="newsletter-container">
+            <div class="newsletter-content">
+                <h2>Stay <span>Secure</span></h2>
+                <p>Subscribe to our cybersecurity newsletter for the latest threats, security tips, and industry insights.</p>
+                <div class="newsletter-features">
+                    <span><i class="fas fa-bell"></i> Weekly Security Updates</span>
+                    <span><i class="fas fa-lightbulb"></i> Expert Tips</span>
+                    <span><i class="fas fa-chart-line"></i> Threat Analysis</span>
+                </div>
+            </div>
+            <div class="newsletter-form">
+                <form id="newsletterForm">
+                    <div class="form-group">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" class="btn-primary">
+                            <i class="fas fa-paper-plane"></i> Subscribe
+                        </button>
+                    </div>
+                    <p class="form-note">No spam. Unsubscribe at any time.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h3>SiteSentry<span>Labs</span></h3>
+                <p>Secure web development and cybersecurity consultancy</p>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/sitesentrylabs" target="_blank">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://www.youtube.com/sitesentrylabs" target="_blank">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://www.github.com/sitesentrylabs" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/sitesentrylabs" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Services</h4>
+                <a href="services.html#web-dev">Web Development</a>
+                <a href="services.html#cybersecurity">Cybersecurity</a>
+                <a href="services.html#consultancy">Consultancy</a>
+                <a href="#security-audit">Security Audit</a>
+            </div>
+            <div class="footer-links">
+                <h4>Company</h4>
+                <a href="about.html">About Us</a>
+                <a href="team.html">Our Team</a>
+                <a href="#">Case Studies</a>
+                <a href="#">Careers</a>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact Info</h4>
+                <p><i class="fas fa-envelope"></i> info@sitesentrylabs.com</p>
+                <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                <p><i class="fas fa-map-marker-alt"></i> Virtual Workspace</p>
+                <p><i class="fas fa-clock"></i> 24/7 Emergency Support</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2022 SiteSentryLabs. All rights reserved. <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Cookie Policy</a></p>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Live Chat Widget -->
+    <div class="live-chat">
+        <div class="chat-toggle">
+            <i class="fas fa-comments"></i>
+            <span class="chat-badge">Live</span>
+        </div>
+        <div class="chat-window">
+            <div class="chat-header">
+                <h4>Cyber Support</h4>
+                <button class="chat-close"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="chat-body">
+                <div class="chat-message bot">
+                    <p>Hello! How can we help secure your business today?</p>
+                </div>
+            </div>
+            <div class="chat-input">
+                <input type="text" placeholder="Type your message...">
+                <button><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/mobile.js"></script>
+    <script src="js/index-enhancements.js"></script>
+</body>
+</html>

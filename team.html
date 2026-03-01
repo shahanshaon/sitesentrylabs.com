@@ -1,0 +1,311 @@
+<!-- Complete updated team.html with images -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team | SiteSentryLabs</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="icon/SSL.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/team.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 3D Background Canvas -->
+    <canvas id="bgCanvas"></canvas>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1><i class="fas fa-shield-alt"></i> SiteSentry<span>Labs</span></h1>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="team.html" class="active">Our Team</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Team Header -->
+    <section class="team-header">
+        <div class="team-header-content">
+            <h1>Meet Our <span>Experts</span></h1>
+            <p>A dedicated team of cybersecurity specialists and web developers committed to protecting your digital assets.</p>
+        </div>
+    </section>
+
+    <!-- Founders Section -->
+    <section class="team-section founders">
+        <div class="section-header">
+            <h2>Founders</h2>
+            <p>The visionaries behind SiteSentryLabs</p>
+        </div>
+        <div class="team-members">
+            <div class="member-card" data-member="founder1">
+                <div class="member-image has-image">
+                    <img src="https://image2url.com/r2/default/images/1770534692575-5c3f2b3f-76ef-42dd-9434-b18325685a2c.jpg" alt="Shahan Shaon - CTO & Founder">
+                    <div class="image-placeholder">
+                        <i class="fas fa-user-secret"></i>
+                    </div>
+                </div>
+                <div class="member-info">
+                    <h3>Shahan Shaon</h3>
+                    <p class="member-role">CTO & Founder</p>
+                    <p class="member-bio">Former cybersecurity lead at a Fortune 500 company with 3+ years of experience in threat intelligence and secure system architecture.</p>
+                    <div class="member-expertise">
+                        <span>Threat Intelligence</span>
+                        <span>Security Architecture</span>
+                        <span>Risk Management</span>
+                    </div>
+                </div>
+            </div>
+            <div class="member-card" data-member="founder2">
+                <div class="member-image has-image">
+                    <img src="https://image2url.com/r2/default/images/1770533800503-47fe642f-d647-4301-8ff0-149af8ce6c35.jpg" alt="Faiaz Rahaman - CEO & Founder">
+                    <div class="image-placeholder">
+                        <i class="fas fa-code"></i>
+                    </div>
+                </div>
+                <div class="member-info">
+                    <h3>Faiaz Rahaman</h3>
+                    <p class="member-role">CEO & Founder</p>
+                    <p class="member-bio">Full-stack developer with expertise in building scalable, secure web applications and implementing DevSecOps practices.</p>
+                    <div class="member-expertise">
+                        <span>Secure Development</span>
+                        <span>DevSecOps</span>
+                        <span>Cloud Security</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advisors Section -->
+    <section class="team-section advisors">
+        <div class="section-header">
+            <h2>Advisory Board</h2>
+            <p>Industry experts guiding our strategic direction</p>
+        </div>
+        <div class="team-members">
+            <div class="member-card" data-member="advisor1">
+                <div class="member-image has-image">
+                    <img src="" alt=" - Cybersecurity Advisor">
+                    <div class="image-placeholder">
+                        <i class="fas fa-gavel"></i>
+                    </div>
+                </div>
+                <div class="member-info">
+                    <h3>Mohammad Sohag</h3>
+                    <p class="member-role">Cybersecurity Advisor</p>
+                    <p class="member-bio">Professor of Cybersecurity at Stanford University and author of several books on network security and cryptography.</p>
+                    <div class="member-expertise">
+                        <span>Cryptography</span>
+                        <span>Network Security</span>
+                        <span>Compliance</span>
+                    </div>
+                </div>
+            </div>
+            <div class="member-card" data-member="advisor2">
+                <div class="member-image has-image">
+                    <img src="" alt=" - Business Strategy Advisor">
+                    <div class="image-placeholder">
+                        <i class="fas fa-gavel"></i>
+                    </div>
+                </div>
+                <div class="member-info">
+                    <h3>Shehan Hasan</h3>
+                    <p class="member-role">Business Strategy Advisor</p>
+                    <p class="member-bio">Former VP of Product at a leading tech company, specializing in scaling security-focused startups.</p>
+                    <div class="member-expertise">
+                        <span>Business Strategy</span>
+                        <span>Product Development</span>
+                        <span>Market Expansion</span>
+                    </div>
+                </div>
+            </div>
+            <div class="member-card" data-member="advisor3">
+                <div class="member-image has-image">
+                    <img src="images/team/elena-rodriguez.jpg" alt="Elena Rodriguez - Legal & Compliance Advisor">
+                    <div class="image-placeholder">
+                        <i class="fas fa-gavel"></i>
+                    </div>
+                </div>
+                <div class="member-info">
+                    <h3>Elena Rodriguez</h3>
+                    <p class="member-role">Legal & Compliance Advisor</p>
+                    <p class="member-bio">Cybersecurity attorney with expertise in data privacy laws and regulatory compliance across multiple jurisdictions.</p>
+                    <div class="member-expertise">
+                        <span>GDPR/CCPA</span>
+                        <span>Regulatory Compliance</span>
+                        <span>Data Privacy</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Employees Section -->
+    <section class="team-section employees">
+        <div class="section-header">
+            <h2>Our Team</h2>
+            <p>Dedicated professionals securing your digital future</p>
+        </div>
+        <div class="team-members">
+            <div class="member-card" data-member="employee1">
+                <div class="member-image has-image">
+                    <img src="images/team/taylor-kim.jpg" alt="Taylor Kim - Lead Security Analyst">
+                    <div class="image-placeholder">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                </div>
+                <div class="member-info">
+                    <h3>Taylor Kim</h3>
+                    <p class="member-role">Lead Security Analyst</p>
+                    <p class="member-bio">Specializes in penetration testing, vulnerability assessments, and security incident response.</p>
+                    <div class="member-expertise">
+                        <span>Penetration Testing</span>
+                        <span>Vulnerability Assessment</span>
+                        <span>Incident Response</span>
+                    </div>
+                </div>
+            </div>
+            <div class="member-card" data-member="employee2">
+                <div class="member-image has-image">
+                    <img src="images/team/riley-smith.jpg" alt="Riley Smith - Senior Web Developer">
+                    <div class="image-placeholder">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                </div>
+                <div class="member-info">
+                    <h3>Riley Smith</h3>
+                    <p class="member-role">Senior Web Developer</p>
+                    <p class="member-bio">Builds secure, scalable web applications with a focus on front-end security and user privacy.</p>
+                    <div class="member-expertise">
+                        <span>React Security</span>
+                        <span>API Security</span>
+                        <span>Secure Coding</span>
+                    </div>
+                </div>
+            </div>
+            <div class="member-card" data-member="employee3">
+                <div class="member-image has-image">
+                    <img src="images/team/casey-johnson.jpg" alt="Casey Johnson - Cloud Security Engineer">
+                    <div class="image-placeholder">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                </div>
+                <div class="member-info">
+                    <h3>Casey Johnson</h3>
+                    <p class="member-role">Cloud Security Engineer</p>
+                    <p class="member-bio">Expert in securing cloud infrastructure across AWS, Azure, and Google Cloud platforms.</p>
+                    <div class="member-expertise">
+                        <span>AWS Security</span>
+                        <span>Container Security</span>
+                        <span>Infrastructure as Code</span>
+                    </div>
+                </div>
+            </div>
+            <div class="member-card" data-member="employee4">
+                <div class="member-image has-image">
+                    <img src="images/team/morgan-williams.jpg" alt="Morgan Williams - Security Operations Manager">
+                    <div class="image-placeholder">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                </div>
+                <div class="member-info">
+                    <h3>Morgan Williams</h3>
+                    <p class="member-role">Security Operations Manager</p>
+                    <p class="member-bio">Manages 24/7 security monitoring, threat hunting, and security automation initiatives.</p>
+                    <div class="member-expertise">
+                        <span>SIEM</span>
+                        <span>Threat Hunting</span>
+                        <span>Security Automation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Stats -->
+    <section class="team-stats-section">
+        <div class="stats-container">
+            <div class="stat-item">
+                <h3>5+</h3>
+                <p>Years Combined Experience</p>
+            </div>
+            <div class="stat-item">
+                <h3>200+</h3>
+                <p>Projects Completed</p>
+            </div>
+            <div class="stat-item">
+                <h3>100%</h3>
+                <p>Client Satisfaction</p>
+            </div>
+            <div class="stat-item">
+                <h3>24/7</h3>
+                <p>Security Monitoring</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h3>SiteSentry<span>Labs</span></h3>
+                <p>Expert team of cybersecurity professionals and web developers.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Our Team</h4>
+                <a href="team.html#founders">Founders</a>
+                <a href="team.html#advisors">Advisory Board</a>
+                <a href="team.html#employees">Security Team</a>
+                <a href="team.html#developers">Development Team</a>
+                <a href="#">Careers</a>
+            </div>
+            <div class="footer-links">
+                <h4>Expertise</h4>
+                <a href="#">Cybersecurity Certifications</a>
+                <a href="#">Development Technologies</a>
+                <a href="#">Industry Specializations</a>
+                <a href="#">Research & Development</a>
+                <a href="#">Training Programs</a>
+            </div>
+            <div class="footer-contact">
+                <h4>Join Our Team</h4>
+                <p><i class="fas fa-briefcase"></i> View Open Positions</p>
+                <p><i class="fas fa-graduation-cap"></i> Internship Programs</p>
+                <p><i class="fas fa-handshake"></i> Partnership Opportunities</p>
+                <p><i class="fas fa-user-tie"></i> Executive Contacts</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2022 SiteSentryLabs. All rights reserved.</p>
+            <p>
+                <a href="#">Privacy Policy</a> | 
+                <a href="#">Terms of Service</a> | 
+                <a href="#">Careers Privacy</a> | 
+                <a href="#">Equal Opportunity</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/mobile.js"></script>
+    <script src="js/team.js"></script>
+</body>
+</html>

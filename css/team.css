@@ -1,0 +1,518 @@
+/* Team Page Specific Styles - BLACK & GREEN THEME */
+
+/* Team Header */
+.team-header {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 8rem;
+    padding-bottom: 4rem;
+}
+
+.team-header-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+}
+
+.team-header-content p {
+    font-size: 1.3rem;
+    max-width: 700px;
+    margin: 0 auto;
+    color: #b0b0b0;
+}
+
+/* Team Sections */
+.team-section {
+    margin-bottom: 5rem;
+}
+
+.team-section .section-header {
+    margin-bottom: 3rem;
+}
+
+.team-section .section-header h2 {
+    font-size: 2.5rem;
+    text-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+}
+
+/* Team Members Grid */
+.team-members {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2.5rem;
+}
+
+/* Member Card */
+.member-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+.member-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--secondary-color);
+    box-shadow: 0 15px 30px var(--hover-glow);
+}
+
+/* FIXED: Member Image Container */
+.member-image {
+    height: 280px; /* Increased height for better image display */
+    background: linear-gradient(135deg, rgba(0, 255, 0, 0.1), rgba(0, 100, 0, 0.1));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* FIXED: Team member images - FILL CONTAINER */
+.member-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Changed from 'cover' to ensure full coverage */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    transition: all 0.5s ease;
+}
+
+/* Image hover effect */
+.member-card:hover .member-image img {
+    transform: scale(1.08);
+}
+
+/* Image placeholder icon */
+.image-placeholder {
+    font-size: 6rem;
+    color: var(--secondary-color);
+    opacity: 0.7;
+    text-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+    position: relative;
+    z-index: 2;
+    transition: opacity 0.3s ease;
+}
+
+/* Hide icon when image is present and show on hover */
+.member-image.has-image .image-placeholder {
+    opacity: 0;
+}
+
+.member-image.has-image:hover .image-placeholder {
+    opacity: 0.7;
+}
+
+/* Scan animation overlay */
+.member-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 30%, rgba(0, 255, 0, 0.1) 50%, transparent 70%);
+    animation: scan 3s linear infinite;
+    z-index: 3;
+    pointer-events: none;
+}
+
+@keyframes scan {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+.member-info {
+    padding: 2rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.member-info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.member-role {
+    color: var(--secondary-color);
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+    font-size: 1.1rem;
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+.member-bio {
+    color: #b0b0b0;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.member-expertise {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+}
+
+.member-expertise span {
+    background: rgba(0, 255, 0, 0.1);
+    color: var(--secondary-color);
+    padding: 0.4rem 0.9rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: 1px solid rgba(0, 255, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.member-expertise span:hover {
+    background: rgba(0, 255, 0, 0.2);
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+}
+
+/* Team Stats Section */
+.team-stats-section {
+    background: var(--card-bg);
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    padding: 4rem 2rem;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 1.5rem;
+    background: rgba(0, 20, 0, 0.3);
+    border-radius: 10px;
+    border: 1px solid rgba(0, 255, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+    border-color: var(--secondary-color);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px var(--hover-glow);
+}
+
+.stat-item h3 {
+    font-size: 3rem;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+}
+
+.stat-item p {
+    font-size: 1.1rem;
+    color: #b0b0b0;
+}
+
+/* Founder Section Specific */
+.founders .member-card {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+}
+
+.founders .member-card:hover {
+    box-shadow: 0 15px 30px rgba(0, 255, 0, 0.4);
+}
+
+.founders .member-image::before {
+    background: linear-gradient(45deg, transparent 30%, rgba(0, 255, 0, 0.2) 50%, transparent 70%);
+}
+
+/* Advisor Section Specific */
+.advisors .member-card {
+    border-color: rgba(0, 200, 0, 0.5);
+}
+
+.advisors .member-card:hover {
+    border-color: var(--accent-color);
+    box-shadow: 0 15px 30px rgba(0, 200, 0, 0.3);
+}
+
+.advisors .image-placeholder {
+    color: var(--accent-color);
+}
+
+.advisors .member-role {
+    color: var(--accent-color);
+}
+
+.advisors .member-expertise span {
+    background: rgba(0, 200, 0, 0.1);
+    color: var(--accent-color);
+    border-color: rgba(0, 200, 0, 0.3);
+}
+
+/* Employees Section Specific */
+.employees .member-card {
+    border-color: rgba(0, 150, 0, 0.3);
+}
+
+.employees .member-card:hover {
+    border-color: #00cc00;
+    box-shadow: 0 15px 30px rgba(0, 150, 0, 0.2);
+}
+
+.employees .member-role {
+    color: #00cc00;
+}
+
+.employees .member-expertise span {
+    background: rgba(0, 150, 0, 0.1);
+    color: #00cc00;
+    border-color: rgba(0, 150, 0, 0.3);
+}
+
+/* Fallback for missing images */
+.member-image:not(.has-image) {
+    background: linear-gradient(135deg, rgba(0, 255, 0, 0.2), rgba(0, 100, 0, 0.2));
+}
+
+.member-image:not(.has-image) img {
+    display: none;
+}
+
+.member-image:not(.has-image) .image-placeholder {
+    opacity: 0.7;
+}
+
+/* Holographic effect for member cards */
+.member-card::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: linear-gradient(45deg, 
+        transparent 0%, 
+        rgba(0, 255, 0, 0.1) 50%, 
+        transparent 100%);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 15px;
+}
+
+.member-card:hover::after {
+    opacity: 1;
+    animation: hologram 2s linear infinite;
+}
+
+@keyframes hologram {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 100%; }
+}
+
+/* Image loading animation */
+.member-image img {
+    opacity: 0;
+    animation: fadeInImage 0.5s ease forwards;
+}
+
+@keyframes fadeInImage {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Image grayscale effect on hover */
+.member-image img {
+    filter: grayscale(30%);
+    transition: filter 0.3s ease;
+}
+
+.member-card:hover .member-image img {
+    filter: grayscale(0%);
+}
+
+/* FIXED: Dark overlay for better text readability on images */
+.member-image::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40%;
+    background: linear-gradient(to top, rgba(10, 14, 23, 0.9), transparent);
+    z-index: 2;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.member-card:hover .member-image::after {
+    opacity: 0.4;
+}
+
+/* Member image border effect */
+.member-image {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.member-card:hover .member-image {
+    border-bottom-color: var(--secondary-color);
+}
+
+/* Loading skeleton for images */
+.member-image.loading {
+    background: linear-gradient(90deg, #1a1a1a 25%, #2a2a2a 50%, #1a1a1a 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+/* Accessibility improvements */
+.member-image img:focus {
+    outline: 2px solid var(--secondary-color);
+    outline-offset: 2px;
+}
+
+/* FIXED: Ensure image fills the entire container without distortion */
+.member-image {
+    min-height: 280px;
+    max-height: 320px;
+}
+
+/* FIXED: Better image container for different aspect ratios */
+@media (max-width: 768px) {
+    .team-header-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .team-header-content p {
+        font-size: 1.1rem;
+    }
+    
+    .team-members {
+        grid-template-columns: 1fr;
+    }
+    
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .member-image {
+        height: 250px;
+        min-height: 250px;
+    }
+    
+    .image-placeholder {
+        font-size: 5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .stats-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .member-expertise {
+        justify-content: center;
+    }
+    
+    .member-image {
+        height: 220px;
+        min-height: 220px;
+    }
+    
+    .image-placeholder {
+        font-size: 4rem;
+    }
+    
+    .member-info {
+        padding: 1.5rem;
+    }
+    
+    .member-info h3 {
+        font-size: 1.5rem;
+    }
+    
+    .member-role {
+        font-size: 1rem;
+    }
+}
+
+/* FIXED: Additional image container fixes */
+.member-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Ensure image maintains aspect ratio but fills container */
+.member-image img {
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+/* For portrait images - adjust positioning */
+.member-card:nth-child(odd) .member-image img {
+    object-position: center top;
+}
+
+.member-card:nth-child(even) .member-image img {
+    object-position: center center;
+}
+
+/* Ensure no white spaces around images */
+.member-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: none;
+}
+
+/* Container fix to prevent overflow issues */
+.member-image {
+    overflow: hidden;
+}
+
+.member-image img {
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    object-fit: cover;
+}
+
+/* Last resort - force fill */
+.member-image.fill-fix img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+}

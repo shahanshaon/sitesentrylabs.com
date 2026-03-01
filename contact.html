@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | SiteSentryLabs</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="icon/SSL.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 3D Background Canvas -->
+    <canvas id="bgCanvas"></canvas>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1><i class="fas fa-shield-alt"></i> SiteSentry<span>Labs</span></h1>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="team.html">Our Team</a>
+                <a href="contact.html" class="active">Contact</a>
+            </div>
+            <div class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Header -->
+    <section class="contact-header">
+        <div class="contact-header-content">
+            <h1>Get In <span>Touch</span></h1>
+            <p>Ready to secure your digital assets? Contact us for a free consultation.</p>
+        </div>
+        <div class="contact-header-3d">
+            <div class="sphere-container">
+                <div class="sphere">
+                    <div class="ring"></div>
+                    <div class="ring"></div>
+                    <div class="ring"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Contact Information</h2>
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>Our Location</h3>
+                        <p>Virtual Workspace<br></p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>Phone Number</h3>
+                        <p>+1 (555) 123-4567</p>
+                        <p>24/7 Emergency Support: +1 (555) 987-6543</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>Email Address</h3>
+                        <p>info@sitesentrylabs.com</p>
+                        <p>support@sitesentrylabs.com</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>Business Hours</h3>
+                        <p>Monday - Friday: 9:00 AM - 6:00 PM PST</p>
+                        <p>Emergency Support: 24/7</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-form-container">
+                <h2>Send us a Message</h2>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="company">Company</label>
+                        <input type="text" id="company" name="company">
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Service Interested In</label>
+                        <select id="service" name="service">
+                            <option value="">Select a service</option>
+                            <option value="web-development">Web Development</option>
+                            <option value="cybersecurity">Cybersecurity</option>
+                            <option value="consultancy">Consultancy</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <div class="form-group checkbox">
+                        <input type="checkbox" id="newsletter" name="newsletter">
+                        <label for="newsletter">Subscribe to our newsletter for security updates</label>
+                    </div>
+                    <button type="submit" class="btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <h2>Our Location</h2>
+        <div class="map-container">
+            <div class="map-placeholder">
+                <div class="map-grid">
+                    <div class="grid-line"></div>
+                    <div class="grid-line"></div>
+                    <div class="grid-line"></div>
+                    <div class="grid-line"></div>
+                    <div class="location-marker">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                </div>
+                <div class="map-overlay">
+                    <h3>Virtual Workspace</h3>
+                    <p>Virtual Workspace</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="section-header">
+            <h2>Frequently Asked <span>Questions</span></h2>
+            <p>Common questions about our services and process</p>
+        </div>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>What is your typical response time for security incidents?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Our Security Operations Center provides 24/7 monitoring with an average response time of under 15 minutes for critical security incidents. We follow a tiered response system based on severity levels.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Do you offer ongoing support after web development projects?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, we offer various maintenance and support packages. Our standard package includes security updates, performance monitoring, and 24/7 technical support. Custom packages are available based on your specific needs.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>What compliance standards do you help with?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>We assist with GDPR, CCPA, HIPAA, PCI DSS, ISO 27001, SOC 2, and other industry-specific compliance requirements. Our team includes legal and compliance experts to ensure comprehensive coverage.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>How do you ensure the security of your own development process?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>We follow a DevSecOps approach with security integrated at every stage. This includes secure coding practices, automated security testing, code reviews, and regular penetration testing of our own infrastructure and tools.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+<footer>
+    <div class="footer-grid"></div>
+    <div class="footer-content">
+        <div class="footer-logo">
+            <h3>SiteSentry<span>Labs</span></h3>
+            <p>Ready to secure your digital assets? Contact us today.</p>
+            <div class="footer-social">
+                <a href="https://www.facebook.com/sitesentrylabs" target="_blank">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://www.youtube.com/sitesentrylabs" target="_blank">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://www.github.com/sitesentrylabs" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/sitesentrylabs" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+            </div>
+        </div>
+        <div class="footer-links">
+            <h4>Contact Options</h4>
+            <a href="contact.html#email">Email Support</a>
+            <a href="contact.html#phone">Phone Support</a>
+            <a href="contact.html#emergency">Emergency Contact</a>
+            <a href="contact.html#location">Office Locations</a>
+            <a href="contact.html#support">Support Portal</a>
+        </div>
+        <div class="footer-links">
+            <h4>Support Hours</h4>
+            <a href="#">Business Hours: 9AM-6PM PST</a>
+            <a href="#">24/7 Emergency Support</a>
+            <a href="#">Weekend Support</a>
+            <a href="#">Holiday Schedule</a>
+            <a href="#">Response Time SLA</a>
+        </div>
+        <div class="footer-contact">
+            <h4>Quick Contact</h4>
+            <p><i class="fas fa-envelope"></i> info@sitesentrylabs.com</p>
+            <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+            <p><i class="fas fa-phone-alt"></i> Emergency: +1 (555) 987-6543</p>
+            <p><i class="fas fa-map-marker-alt"></i> Virtual Workspace</p>
+        </div>
+    </div>
+    <div class="footer-newsletter">
+        <h4>Stay Updated with Security News</h4>
+        <p>Subscribe to our newsletter for the latest cybersecurity insights and updates.</p>
+        <form>
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2022 SiteSentryLabs. All rights reserved.</p>
+        <p>
+            <a href="#">Privacy Policy</a> | 
+            <a href="#">Terms of Service</a> | 
+            <a href="#">Contact Privacy</a> | 
+            <a href="#">Support Policy</a>
+        </p>
+    </div>
+</footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/mobile.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html>

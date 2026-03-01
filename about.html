@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | SiteSentryLabs</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="icon/SSL.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 3D Background Canvas -->
+    <canvas id="bgCanvas"></canvas>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1><i class="fas fa-shield-alt"></i> SiteSentry<span>Labs</span></h1>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html" class="active">About</a>
+                <a href="services.html">Services</a>
+                <a href="team.html">Our Team</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Hero -->
+    <section class="about-hero">
+        <div class="about-hero-content">
+            <h1>Securing the <span>Digital Future</span></h1>
+            <p class="hero-subtitle">Founded in 2020, SiteSentryLabs bridges the gap between cutting-edge web development and impenetrable cybersecurity.</p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <h3>5+</h3>
+                    <p>Years of Excellence</p>
+                </div>
+                <div class="stat">
+                    <h3>200+</h3>
+                    <p>Projects Delivered</p>
+                </div>
+                <div class="stat">
+                    <h3>100%</h3>
+                    <p>Client Security Record</p>
+                </div>
+            </div>
+        </div>
+        <div class="about-hero-3d">
+            <div class="hexagon-container">
+                <div class="hexagon">
+                    <div class="hex-top"></div>
+                    <div class="hex-middle"></div>
+                    <div class="hex-bottom"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story -->
+    <section class="our-story">
+        <div class="section-header">
+            <h2>Our <span>Story</span></h2>
+            <p>From a shared vision to industry leadership</p>
+        </div>
+        <div class="story-timeline">
+            <div class="timeline-item">
+                <div class="timeline-year">2022</div>
+                <div class="timeline-content">
+                    <h3>The Beginning</h3>
+                    <p>SiteSentryLabs was founded by Shahan Shoan and Faiaz Rahaman, who identified a critical gap in the market: web development agencies neglecting security, and security firms lacking development expertise.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">2023</div>
+                <div class="timeline-content">
+                    <h3>First Major Breakthrough</h3>
+                    <p>We developed our proprietary Secure Development Framework (SDF), integrating security at every stage of the development lifecycle. Our first enterprise client reported zero security breaches in their first year.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">2024</div>
+                <div class="timeline-content">
+                    <h3>Expansion & Recognition</h3>
+                    <p>Expanded our team to include specialized cybersecurity experts and web developers. Recognized as "Most Innovative Security Startup" by TechSecurity Magazine.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">2025</div>
+                <div class="timeline-content">
+                    <h3>Industry Leadership</h3>
+                    <p>Launched our DevSecOps consultancy division. Partnered with major cloud providers to develop industry-leading security protocols for cloud-native applications.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-year">2026</div>
+                <div class="timeline-content">
+                    <h3>Today & Beyond</h3>
+                    <p>Now serving clients across three continents with a team of 9 experts. Continuously evolving to combat emerging threats in an increasingly complex digital landscape.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="mission-vision">
+        <div class="mission-vision-container">
+            <div class="mission-card">
+                <div class="card-icon">
+                    <i class="fas fa-bullseye"></i>
+                </div>
+                <h3>Our Mission</h3>
+                <p>To empower businesses with secure digital solutions that not only protect their assets but also enable growth and innovation in an increasingly connected world.</p>
+                <ul class="mission-points">
+                    <li><i class="fas fa-check-circle"></i> Integrate security into every development phase</li>
+                    <li><i class="fas fa-check-circle"></i> Make advanced cybersecurity accessible</li>
+                    <li><i class="fas fa-check-circle"></i> Foster a culture of security awareness</li>
+                    <li><i class="fas fa-check-circle"></i> Continuously innovate against evolving threats</li>
+                </ul>
+            </div>
+            <div class="vision-card">
+                <div class="card-icon">
+                    <i class="fas fa-eye"></i>
+                </div>
+                <h3>Our Vision</h3>
+                <p>To create a digital ecosystem where security is intrinsic, not additional—where every application is born secure and remains resilient throughout its lifecycle.</p>
+                <ul class="vision-points">
+                    <li><i class="fas fa-rocket"></i> Pioneer next-generation security frameworks</li>
+                    <li><i class="fas fa-globe"></i> Set global standards for secure development</li>
+                    <li><i class="fas fa-handshake"></i> Build trust as the foundation of digital interactions</li>
+                    <li><i class="fas fa-infinity"></i> Enable endless innovation without security compromises</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Values -->
+    <section class="our-values">
+        <div class="section-header">
+            <h2>Our <span>Values</span></h2>
+            <p>The principles that guide every decision we make</p>
+        </div>
+        <div class="values-container">
+            <div class="value-card">
+                <div class="value-icon">
+                    <div class="value-hexagon">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                </div>
+                <h3>Security First</h3>
+                <p>Security isn't an afterthought—it's the foundation of everything we build. We believe that true innovation cannot exist without robust protection.</p>
+            </div>
+            <div class="value-card">
+                <div class="value-icon">
+                    <div class="value-hexagon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                </div>
+                <h3>Continuous Innovation</h3>
+                <p>The threat landscape evolves daily, and so do we. We invest in research and development to stay ahead of emerging security challenges.</p>
+            </div>
+            <div class="value-card">
+                <div class="value-icon">
+                    <div class="value-hexagon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                </div>
+                <h3>Client Partnership</h3>
+                <p>We view our clients as partners in security. Your success is our success, and we work collaboratively to achieve your security objectives.</p>
+            </div>
+            <div class="value-card">
+                <div class="value-icon">
+                    <div class="value-hexagon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                </div>
+                <h3>Transparency</h3>
+                <p>We believe in open communication about security postures, risks, and solutions. No hidden vulnerabilities, no obscured processes.</p>
+            </div>
+            <div class="value-card">
+                <div class="value-icon">
+                    <div class="value-hexagon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                </div>
+                <h3>Knowledge Sharing</h3>
+                <p>We empower our clients with knowledge, not just solutions. Understanding threats is the first step toward effective defense.</p>
+            </div>
+            <div class="value-card">
+                <div class="value-icon">
+                    <div class="value-hexagon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                </div>
+                <h3>Ethical Responsibility</h3>
+                <p>We hold ourselves to the highest ethical standards, using our expertise to protect, not exploit, digital ecosystems.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Approach -->
+    <section class="our-approach">
+        <div class="section-header">
+            <h2>Our <span>Approach</span></h2>
+            <p>How we deliver exceptional security and development solutions</p>
+        </div>
+        <div class="approach-container">
+            <div class="approach-step">
+                <div class="step-number">01</div>
+                <div class="step-content">
+                    <h3>Assessment & Analysis</h3>
+                    <p>We begin with a comprehensive analysis of your current digital footprint, identifying vulnerabilities and understanding your specific security needs.</p>
+                </div>
+            </div>
+            <div class="approach-step">
+                <div class="step-number">02</div>
+                <div class="step-content">
+                    <h3>Strategic Planning</h3>
+                    <p>Based on our assessment, we develop a customized security strategy that aligns with your business objectives and risk tolerance.</p>
+                </div>
+            </div>
+            <div class="approach-step">
+                <div class="step-number">03</div>
+                <div class="step-content">
+                    <h3>Secure Implementation</h3>
+                    <p>Our development team builds or fortifies your applications using our Secure Development Framework, integrating security at every phase.</p>
+                </div>
+            </div>
+            <div class="approach-step">
+                <div class="step-number">04</div>
+                <div class="step-content">
+                    <h3>Continuous Monitoring</h3>
+                    <p>We provide 24/7 monitoring of your digital assets, with real-time threat detection and immediate response protocols.</p>
+                </div>
+            </div>
+            <div class="approach-step">
+                <div class="step-number">05</div>
+                <div class="step-content">
+                    <h3>Evolution & Improvement</h3>
+                    <p>Security is an ongoing process. We regularly review and enhance your security posture to address new threats and technologies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Stack -->
+    <section class="tech-stack">
+        <div class="section-header">
+            <h2>Technology <span>Stack</span></h2>
+            <p>The tools and technologies we trust to build secure solutions</p>
+        </div>
+        <div class="tech-container">
+            <div class="tech-category">
+                <h3><i class="fas fa-code"></i> Development</h3>
+                <div class="tech-tags">
+                    <span>React</span>
+                    <span>Vue.js</span>
+                    <span>Node.js</span>
+                    <span>Python</span>
+                    <span>TypeScript</span>
+                    <span>Django</span>
+                </div>
+            </div>
+            <div class="tech-category">
+                <h3><i class="fas fa-shield-alt"></i> Security Tools</h3>
+                <div class="tech-tags">
+                    <span>Burp Suite</span>
+                    <span>Metasploit</span>
+                    <span>Nessus</span>
+                    <span>Wireshark</span>
+                    <span>Snort</span>
+                    <span>OSSEC</span>
+                </div>
+            </div>
+            <div class="tech-category">
+                <h3><i class="fas fa-cloud"></i> Cloud & Infrastructure</h3>
+                <div class="tech-tags">
+                    <span>AWS</span>
+                    <span>Azure</span>
+                    <span>Google Cloud</span>
+                    <span>Docker</span>
+                    <span>Kubernetes</span>
+                    <span>Terraform</span>
+                </div>
+            </div>
+            <div class="tech-category">
+                <h3><i class="fas fa-tools"></i> DevSecOps</h3>
+                <div class="tech-tags">
+                    <span>Jenkins</span>
+                    <span>GitLab CI</span>
+                    <span>SonarQube</span>
+                    <span>Snyk</span>
+                    <span>Checkmarx</span>
+                    <span>OWASP ZAP</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="about-cta">
+        <div class="cta-content">
+            <h2>Ready to Build Secure Digital Solutions?</h2>
+            <p>Partner with us to create applications that are as secure as they are innovative.</p>
+            <div class="cta-buttons">
+                <a href="services.html" class="btn-primary">Explore Our Services</a>
+                <a href="contact.html" class="btn-secondary">Schedule a Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+<footer>
+    <div class="footer-grid"></div>
+    <div class="footer-content">
+        <div class="footer-logo">
+            <h3>SiteSentry<span>Labs</span></h3>
+            <p>Secure web development and cybersecurity consultancy protecting businesses since 2020.</p>
+            <div class="footer-social">
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <a href="../index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Our Services</a>
+            <a href="team.html">Our Team</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-links">
+            <h4>Services</h4>
+            <a href="services.html#web-dev">Web Development</a>
+            <a href="services.html#cybersecurity">Cybersecurity</a>
+            <a href="services.html#consultancy">Consultancy</a>
+            <a href="services.html">All Services</a>
+        </div>
+        <div class="footer-contact">
+            <h4>Contact Info</h4>
+            <p><i class="fas fa-envelope"></i> info@sitesentrylabs.com</p>
+            <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+            <p><i class="fas fa-map-marker-alt"></i> San Francisco, CA</p>
+            <p><i class="fas fa-clock"></i> 24/7 Emergency Support</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2022 SiteSentryLabs. All rights reserved.</p>
+        <p>
+            <a href="#">Privacy Policy</a> | 
+            <a href="#">Terms of Service</a> | 
+            <a href="#">Cookie Policy</a> | 
+            <a href="#">Security Compliance</a>
+        </p>
+    </div>
+</footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/about.js"></script>
+    <script src="js/mobile.js"></script>
+</body>
+</html>
